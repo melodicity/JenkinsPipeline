@@ -5,7 +5,7 @@ pipeline {
         stage("Build") {
             steps {
                 echo "Building and packaging with Maven"
-                echo "mvn package'
+                echo "mvn package"
                 // Maven command to compile, build and package the source code
             }
         }

@@ -17,13 +17,13 @@ pipeline {
             }
             post {
                 success {
-                    mail to: "dsoutar812@gmail.com",
+                    emailext to: "dsoutar812@gmail.com",
                     subject: "Unit and Integration Tests Passed",
                     body: "Build log attached.",
                     attachLog: true
                 }
                 failure {
-                    mail to: "dsoutar812@gmail.com",
+                    emailext to: "dsoutar812@gmail.com",
                     subject: "Unit and Integration Tests Failed",
                     body: "Build log attached.",
                     attachLog: true
@@ -47,13 +47,13 @@ pipeline {
                 // ZAP commands to perform a security scan
             }
             post {
-                success {
+                emailext {
                     mail to: "dsoutar812@gmail.com",
                     subject: "Security Scan Passed",
                     body: "Build log attached.",
                     attachLog: true
                 }
-                failure {
+                emailext {
                     mail to: "dsoutar812@gmail.com",
                     subject: "Security Scan Failed",
                     body: "Build log attached.",
@@ -78,13 +78,13 @@ pipeline {
             }
             post {
                 success {
-                    mail to: "dsoutar812@gmail.com",
+                    emailext to: "dsoutar812@gmail.com",
                     subject: "Integration Tests on Staging Passed",
                     body: "Build log attached.",
                     attachLog: true
                 }
                 failure {
-                    mail to: "dsoutar812@gmail.com",
+                    emailext to: "dsoutar812@gmail.com",
                     subject: "Integration Tests on Staging Failed",
                     body: "Build log attached.",
                     attachLog: true

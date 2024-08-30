@@ -8,7 +8,7 @@ pipeline {
             }
             post {
                 always {
-                    mail to: "s223387609@deakin.edu.au"
+                    mail to: "dsoutar812@gmail.com"
                     subject: "Build Status Email"
                     body: "Build log attached!"
                 }

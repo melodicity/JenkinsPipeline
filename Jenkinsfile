@@ -47,13 +47,13 @@ pipeline {
                 // ZAP commands to perform a security scan
             }
             post {
-                emailext {
+                success {
                     emailext to: "dsoutar812@gmail.com",
                     subject: "Security Scan Passed",
                     body: "Build log attached.",
                     attachLog: true
                 }
-                emailext {
+                failure {
                     emailext to: "dsoutar812@gmail.com",
                     subject: "Security Scan Failed",
                     body: "Build log attached.",

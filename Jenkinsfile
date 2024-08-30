@@ -8,8 +8,8 @@ pipeline {
             }
             post {
                 always {
-                    mail to: "dsoutar812@gmail.com"
-                    subject: "Build Status Email"
+                    mail to: "dsoutar812@gmail.com",
+                    subject: "Build Status Email",
                     body: "Build log attached!"
                 }
             }

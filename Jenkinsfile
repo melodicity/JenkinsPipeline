@@ -11,6 +11,7 @@ pipeline {
                     mail to: "s223387609@deakin.edu.au"
                     subject: "Build Status Email"
                     body: "Build log attached!"
+                }
             }
         }
         stage("Test") {
